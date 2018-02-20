@@ -14,8 +14,18 @@
 	position: relative;
 }
 
-.mat-form-field mat-icon {
+.mat-form-field .mat-icon {
 	position: absolute;
 	right: 15px;
 	top: 0;
+}
+
+.mat-form-field.mat-focused .mat-icon.search-icon {
+	color: #673ab7;
+}
+
+a.mat-fab {
+	bottom: 25px;
+	position: fixed;
+	right: 35px;
 }

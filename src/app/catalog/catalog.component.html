@@ -1,7 +1,7 @@
 <form [formGroup]="searchForm" class="mat-typography">
 	<mat-form-field class="full-width has-icon">
 	 	<input type="search" matInput placeholder="Search by console or title" formControlName="searchControl">
-	 	<span><mat-icon>search</mat-icon></span>
+	 	<span><mat-icon class="search-icon">search</mat-icon></span>
 	</mat-form-field>
 </form>
 
@@ -41,3 +41,7 @@
 		</div>
 	</mat-card-content>
 </mat-card>
+
+<div class="button-row">
+<a mat-fab color="primary" routerLink="/add"><mat-icon>add</mat-icon></a>
+</div>

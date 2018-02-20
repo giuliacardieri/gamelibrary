@@ -16,8 +16,8 @@ export class GameService {
   // get games from json-service (or back-end if it existed)
   // search string is optional - only used to filter videogames on the catalog
 	getGames(search?: string ): Observable<Game[]> {
-    return this.http.get(`${GAME_API}/games`, {params: {q: search})
-      .map(response => response.json())
+    return this.http.get(`${GAME_API}/games`, {params: {q: search}})
+    .map(response => response.json());
   }
 
   // post games that user inserted on the form to json-service (or back-end if it existed)

@@ -37,10 +37,10 @@ export class GameFormComponent {
   // get content from form and post to json-service (or back-end if it existed)
   postGames(games: Game): void {
   	this.gameService.postGames(games)
-  		.subscribe( (games.title : string) => {
-				//console.log('game added ${gameId)')
+  		.subscribe( (value : Game[]) => {
+				console.log('game added ${gameId)')
 				this.router.navigate(['/catalog']) // goes back to catalog view already with the new game
-  		})
+  		});
 	}
 }
 
