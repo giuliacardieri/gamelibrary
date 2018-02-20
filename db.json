@@ -2,39 +2,48 @@
   "games": [
     {
       "title": "Mario Party 5",
-      "year": "2002",
+      "year": 2003,
       "console": "Game Cube",
       "completed": true,
-      "dateCompletion": "02-02-2017",
-      "personalNotes": "Loved this game!!!",
+      "dateCompletion": "2015-10-30T02:00:00.000Z",
+      "personalNotes": "Friendships might end with this game.",
       "id": 0
     },
     {
       "title": "Mario Party 4",
-      "year": "2000",
+      "year": 2002,
       "console": "Game Cube",
       "completed": true,
-      "dateCompletion": "12-12-2007",
-      "personalNotes": "Loved this game too!!!",
+      "dateCompletion": "2007-12-12T02:00:00.000Z",
+      "personalNotes": "",
       "id": 1
     },
     {
       "title": "Metal Gear Solid 2",
-      "year": "2001",
+      "year": 2001,
       "console": "PS2",
       "completed": true,
-      "dateCompletion": "07-08-2017",
-      "personalNotes": "really liked this game. Kojima really nailed here.",
+      "dateCompletion": "2017-08-07T02:00:00.000Z",
+      "personalNotes": "I really liked this game. Kojima really nailed here.",
       "id": 2
     },
     {
-      "title": "My Little Pony",
-      "year": 2012,
-      "console": "Nintendo Wii",
-      "completed": true,
-      "dateCompletion": "2018-02-09T02:00:00.000Z",
-      "personalNotes": "",
+      "title": "The Legend of Zelda: The Wind Waker",
+      "year": 2002,
+      "console": "Game Cube",
+      "completed": false,
+      "dateCompletion": "",
+      "personalNotes": "I borrowed it to my cousin and he never returned. Still sad about it.",
       "id": 3
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "year": 2017,
+      "console": "Nintendo Wii U",
+      "completed": true,
+      "dateCompletion": "2018-02-16T02:00:00.000Z",
+      "personalNotes": "Amazing game!",
+      "id": 4
     }
   ]
 }

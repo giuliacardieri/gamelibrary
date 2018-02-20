@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { GameFormComponent } from './game-form/game-form.component';
 
-import { GameService }          from './game.service';
+
+import { GameService } from './game.service';
 
 // browser animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // forms support
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -37,7 +38,8 @@ import { StorageServiceModule} from 'angular-webstorage-service';
     FormsModule,
     StorageServiceModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [
     GameService,

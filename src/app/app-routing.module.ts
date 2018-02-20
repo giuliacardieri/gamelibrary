@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogComponent } from './catalog/catalog.component';
 import { GameFormComponent } from './game-form/game-form.component';
 
+// routes for the app
 const routes: Routes = [
   { path: '', redirectTo: '/catalog', pathMatch: 'full' }, // default route
   { path: 'catalog', component: CatalogComponent },

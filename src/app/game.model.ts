@@ -1,3 +1,4 @@
+// model for each videogame
 export class Game {
   public title: string;
   public year: number;

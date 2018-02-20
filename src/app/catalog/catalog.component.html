@@ -1,15 +1,21 @@
-<mat-form-field class="full-width has-icon">
- 	<input type="search" matInput placeholder="Search by console or title">
- 	<span><mat-icon>search</mat-icon></span>
-</mat-form-field>
+<form [formGroup]="searchForm" class="mat-typography">
+	<mat-form-field class="full-width has-icon">
+	 	<input type="search" matInput placeholder="Search by console or title" formControlName="searchControl">
+	 	<span><mat-icon>search</mat-icon></span>
+	</mat-form-field>
+</form>
+
+<div class="no-search-term mat-typography" *ngIf="games?.length === 0">
+	<p>No results were found on games/consoles</p>
+</div>
 
 
-<mat-card class="mat-primary catalog-card" *ngFor="let game of games">
-	<mat-card-content>
+<mat-card class="catalog-card" *ngFor="let game of games">
+	<mat-card-content class="mat-typography">
 		<h2>{{game.title}}</h2>
 		<p>
 			<span><mat-icon>date_range</mat-icon></span>
-			{{(today | date: 'yyyy') - game.year}} years ago
+			{{(today | date: 'yyyy') - game.year}} years old
 		</p>
 		<p>
 			<span><mat-icon>videogame_asset</mat-icon></span>

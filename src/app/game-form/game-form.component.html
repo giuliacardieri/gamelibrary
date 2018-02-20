@@ -1,8 +1,9 @@
-<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm.form.value)" class="add-game-container">
+<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm.form.value)" class="add-game-container mat-typography">
   <mat-form-field class="full-width">
     <input matInput placeholder="Title" name="title" required ngModel #titleField="ngModel">
   </mat-form-field>
 
+  <!-- todo: add a max_value custom validator so the max value for year is current year -->
   <mat-form-field class="full-width">
     <input type="number" matInput placeholder="Year" name="year" required ngModel #yearField="ngModel">
   </mat-form-field>
