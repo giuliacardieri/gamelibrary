@@ -13,7 +13,6 @@ import { Game } from '../game.model';
 export class GameFormComponent {
 	games: Game[];
   maxDate = new Date(); // maxDate for Date of completion is today
-  maxYear = (new Date()).getYear();
 
 	constructor(
     private location: Location,
