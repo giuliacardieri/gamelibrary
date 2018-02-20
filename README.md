@@ -31,7 +31,7 @@ Run `ng serve` on the root folder of the application.
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Add games
-Click on the right menu option and add new games :D
+Click on the add button to include new games :D
 
 Updating and deleting functions were not implemented yet.
 
