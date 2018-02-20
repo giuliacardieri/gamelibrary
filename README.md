@@ -1,7 +1,10 @@
 # Game Library
 
 A web app using [Angular CLI](https://github.com/angular/angular-cli) 1.7.0 (angular/cdk 5.2.1) and [Angular Material](https://material.angular.io/) 5.2.1.
-Its goal is to make a catalog to keep track of the videogames I (supposedly) own. The main (catalog) page shows a list of videogames, including data as year of release, title, date of completion (if completed) and personal notes. The add game page allow users to add new videogames.
+
+Its goal is to make a catalog to keep track of the videogames I (supposedly) own. 
+
+The main (catalog) page shows a list of videogames, including data as year of release, title, date of completion (if completed) and personal notes. The add game page allow users to add new videogames.
 
 ## Data storage
 
