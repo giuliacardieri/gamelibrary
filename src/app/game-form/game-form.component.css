@@ -1,0 +1,20 @@
+.add-game-container {
+	padding: 15px;
+}
+
+.mat-form-field.full-width {
+	width: 100%;
+}
+
+.mat-checkbox {
+	display: block;
+	margin: 5px 0;
+}
+
+.button-row.right {
+	text-align: right;
+}
+
+.button-row.left {
+	text-align: left;
+}

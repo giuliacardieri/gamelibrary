@@ -1,0 +1,32 @@
+<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm.form.value)" class="add-game-container">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Title" name="title" required ngModel #titleField="ngModel">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input type="number" matInput placeholder="Year" name="year" required ngModel #yearField="ngModel">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Console" name="console" required ngModel #consoleField="ngModel">
+      <mat-option *ngFor="let console of consoles" [value]="console">{{console}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-checkbox name="completed" ngModel [(ngModel)]="completed" #completedField="ngModel">Completed</mat-checkbox>
+
+  <mat-form-field class="full-width">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date of completion" name="dateCompletion" ngModel #dateCompletionField="ngModel" [required]="completed ? true : null " [max]="maxDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Personal Notes" name="personalNotes" ngModel #personalNotesField="ngModel">
+  </mat-form-field>
+
+  <div class="button-row right">
+    <button mat-button color="primary" type="button" (click)="goBack()">Back to Catalog</button>
+    <button mat-button color="primary" type="submit" [disabled]="!gameForm.form.valid">Add</button>
+  </div>
+</form>

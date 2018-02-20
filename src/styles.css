@@ -1,6 +1,5 @@
-@import url(~@angular/material/prebuilt-themes/deeppurple-amber.css);
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-body {
-  margin: 0; }
+
 
 /*# sourceMappingURL=styles.css.map */

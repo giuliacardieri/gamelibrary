@@ -1,0 +1,37 @@
+<mat-form-field class="full-width has-icon">
+ 	<input type="search" matInput placeholder="Search by console or title">
+ 	<span><mat-icon>search</mat-icon></span>
+</mat-form-field>
+
+
+<mat-card class="mat-primary catalog-card" *ngFor="let game of games">
+	<mat-card-content>
+		<h2>{{game.title}}</h2>
+		<p>
+			<span><mat-icon>date_range</mat-icon></span>
+			{{(today | date: 'yyyy') - game.year}} years ago
+		</p>
+		<p>
+			<span><mat-icon>videogame_asset</mat-icon></span>
+			{{game.console}}
+		</p>
+		<div *ngIf="game.completed;else not_completed">
+			<p>
+				<span><mat-icon>check_circle</mat-icon></span>
+				Completed on {{game.dateCompletion | date: 'shortDate'}}
+			</p>
+		</div>
+		<ng-template #not_completed>
+			<p>
+				<span><mat-icon>error</mat-icon></span>
+				Not completed
+			</p>
+		</ng-template>
+		<div *ngIf="game.personalNotes">
+			<p>
+				<span><mat-icon>info</mat-icon></span>
+				{{game.personalNotes}}
+			</p>
+		</div>
+	</mat-card-content>
+</mat-card>

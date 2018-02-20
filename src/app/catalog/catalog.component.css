@@ -1,0 +1,21 @@
+.catalog-card .mat-icon {
+	font-size: 22px;
+	height: 22px;
+	vertical-align: middle;
+	width: 22px;
+}
+
+.mat-form-field.full-width {
+	margin-top: 15px;
+	width: 100%;
+}
+
+.mat-form-field input {
+	position: relative;
+}
+
+.mat-form-field mat-icon {
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
