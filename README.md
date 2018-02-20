@@ -12,10 +12,12 @@ There is no back-end for this application. A fake REST API was created using JSO
 
 ## Run the fake REST API
 
-To install JSON Server using npm
+To begin install JSON Server, the command using npm is:
+
 `npm install -g json-server`
 
-Then create/run a db.json file
+Then create/run a db.json file:
+
 `json-server db.json`
 
 This server needs to be running every time the Angular application is running
@@ -24,5 +26,14 @@ Other instructions are available at [https://github.com/typicode/json-server](ht
 
 ## Run the Angular application
 
-Run `ng serve` on the root folder of the application
+Run `ng serve` on the root folder of the application.
+
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Add games
+Click on the right menu option and add new games :D
+
+Updating and deleting functions were not implemented yet.
+
+## Known bugs
+The year input field on the form allows any year, it should not allow years in the future.
