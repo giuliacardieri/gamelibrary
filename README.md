@@ -1,27 +1,25 @@
-# Gamelibrary
+# Game Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+A web app using [Angular CLI](https://github.com/angular/angular-cli) 1.7.0 (angular/cdk 5.2.1) and [Angular Material](https://material.angular.io/) 5.2.1.
+Its goal is to make a catalog to keep track of the videogames I (supposedly) own. The main (catalog) page shows a list of videogames, including data as year of release, title, date of completion (if completed) and personal notes. The add game page allow users to add new videogames.
 
-## Development server
+## Data storage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+There is no back-end for this application. A fake REST API was created using JSON Server(https://github.com/typicode/json-server), which needs to be installed and started to run this web application.
 
-## Code scaffolding
+## Run the fake REST API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To install JSON Server using npm
+`npm install -g json-server`
 
-## Build
+Then create/run a db.json file
+`json-server db.json`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+This server needs to be running every time the Angular application is running
 
-## Running unit tests
+Other instructions are available at [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run the Angular application
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng serve` on the root folder of the application
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
