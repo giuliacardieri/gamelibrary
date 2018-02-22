@@ -1,4 +1,4 @@
-<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm.form.value)" class="add-game-container mat-typography">
+<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm.form.value, gameForm)" class="add-game-container mat-typography">
   <mat-form-field class="full-width">
     <input matInput placeholder="Title" name="title" required ngModel #titleField="ngModel">
   </mat-form-field>

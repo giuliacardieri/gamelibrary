@@ -13,10 +13,18 @@
 <mat-card class="catalog-card" *ngFor="let game of games">
 	<mat-card-content class="mat-typography">
 		<h2>{{game.title}}</h2>
-		<p>
-			<span><mat-icon>date_range</mat-icon></span>
-			{{(today | date: 'yyyy') - game.year}} years old
-		</p>
+		<div *ngIf="(today | date: 'yyyy') - game.year >= 1;else recent_year">
+			<p>
+				<span><mat-icon>date_range</mat-icon></span>
+				{{(today | date: 'yyyy') - game.year}} years old
+			</p>
+		</div>
+		<ng-template #recent_year>
+			<p>
+				<span><mat-icon>date_range</mat-icon></span>
+				Released this year
+			</p>
+		</ng-template>
 		<p>
 			<span><mat-icon>videogame_asset</mat-icon></span>
 			{{game.console}}

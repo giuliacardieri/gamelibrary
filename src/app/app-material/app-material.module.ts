@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule, MatTabsModule, MatNativeDateModule,
       MatCardModule, MatIconModule, MatButtonModule, 
       MatMenuModule, MatFormFieldModule, MatInputModule, 
-      MatCheckboxModule, MatSelectModule, MatDatepickerModule, } from '@angular/material';
+      MatCheckboxModule, MatSelectModule, MatDatepickerModule,
+      MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { MatToolbarModule, MatTabsModule, MatNativeDateModule,
     MatCheckboxModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSnackBarModule
    ],
   declarations: []
 })

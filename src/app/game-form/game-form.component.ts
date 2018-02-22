@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { GameService } from '../game.service';
 import { Game } from '../game.model';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-game-form',
@@ -17,7 +18,8 @@ export class GameFormComponent {
 	constructor(
     private location: Location,
     private router: Router,
-    private gameService: GameService
+    private gameService: GameService,
+    public snackBar: MatSnackBar
   ) {}
 
   // array with all console names
@@ -29,16 +31,19 @@ export class GameFormComponent {
   }
 
   // on gameForm submit
-  onSubmit(form) {
-  	this.postGames(form);
+  onSubmit(formContent, gameForm) {
+    gameForm.resetForm();
+    gameForm.reset();
+  	this.postGames(formContent);
   }
 
   // get content from form and post to json-service (or back-end if it existed)
   postGames(games: Game): void {
   	this.gameService.postGames(games)
   		.subscribe( (value : Game[]) => {
-				console.log('game added ${gameId)')
-				this.router.navigate(['/catalog']) // goes back to catalog view already with the new game
+        this.snackBar.open('Game added to catalog!', 'Dismiss');
+				//console.log('game added ${gameId)')
+				//this.router.navigate(['/catalog']) // goes back to catalog view already with the new game
   		});
 	}
 }
